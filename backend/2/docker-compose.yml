@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=my_password
+    volumes:
+      - mongo-db:/data/db
+    networks:
+      fullstack-service:
+
+  backend:
+    build: .
+    container_name: backend
+    ports:
+      - 1111:1111
+    environment:
+      - MONGO_IP=mongodb
+    networks:
+      fullstack-service:
+
+volumes:
+  mongo-db:
+
+networks:
+  fullstack-service:
+    name: fullstack-service

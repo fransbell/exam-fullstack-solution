@@ -1,0 +1,24 @@
+
+GET http://localhost:3333/api/category/
+###
+GET http://localhost:3333/api/category/1
+###
+
+POST http://localhost:1111/api/category/create
+Content-Type: application/json
+
+{
+    "name":"เครื่องดื่มอัดลมและน้ำหวาน",
+    "description" :"ช่วยดับกระหาย เพิ่มความสดชื่น"
+}
+###
+POST http://localhost:1111/api/category/update/61e76f2c7f6bcbbe112096a9
+Content-Type: application/json
+
+{
+    "name":"เครื่องดื่มอัดลมและน้ำหวาน",
+    "description" :"ช่วยดับกระหาย เพิ่มความสดชื่น"
+}
+
+###
+DELETE http://localhost:1111/api/category/delete/61e7aabf912864b5d567b138

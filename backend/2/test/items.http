@@ -1,0 +1,27 @@
+
+GET http://localhost:3333/api/items/
+###
+
+POST http://localhost:1111/api/items/create
+Content-Type: application/json
+
+{
+    "shopId": "61e76f007f6bcbbe11209699",
+    "name" : "ขนมขบเคี้ยว",
+    "description":"น้ำดื่มผสมโซดา",
+    "price": 20,
+    "tag": "ขวด"
+}
+###
+POST http://localhost:3333/api/items/update/61e76e9a7f6bcbbe11209695
+Content-Type: application/json
+
+{
+    "name" : "แฟนต้า",
+    "description":"น้ำดื่มผสมโซดา",
+    "price": 200,
+    "tag": "ขวด"
+}
+
+###
+DELETE http://localhost:3333/api/items/delete/61e64e78980152ab3e24215f
