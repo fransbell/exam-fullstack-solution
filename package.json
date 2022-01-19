@@ -1,0 +1,24 @@
+{
+  "name": "exam-fullstack-solution",
+  "version": "1.0.0",
+  "description": "## Backend Path",
+  "main": "index.js",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "scripts": {
+    "problem101": "node ./backend/1.1/app",
+    "problem102": "node ./backend/1.2/app",
+    "problem103": "node ./backend/1.3/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fransbell/exam-fullstack-solution.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fransbell/exam-fullstack-solution/issues"
+  },
+  "homepage": "https://github.com/fransbell/exam-fullstack-solution#readme"
+}

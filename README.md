@@ -22,9 +22,9 @@ npm start problem-101
 
 รายชื่อ program ทั้งหมด
 
-- problem-101 (problem-solving 1.1)
-- problem-102 (problem-solving 1.2)
-- problem-103 (problem-solving 1.3)
+- problem101 (problem-solving 1.1)
+- problem102 (problem-solving 1.2)
+- problem103 (problem-solving 1.3)
 
 ### Web Service
 
