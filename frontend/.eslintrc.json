@@ -5,6 +5,7 @@
     "@next/next/no-page-custom-font": "off",
     "react-hooks/exhaustive-deps": "off",
     "react-hooks/rules-of-hooks": "off",
-    "@next/next/link-passhref": "off"
+    "@next/next/link-passhref": "off",
+    "@next/next/google-font-display": "off"
   }
 }

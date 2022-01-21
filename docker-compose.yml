@@ -30,6 +30,8 @@ services:
       - 3000:3000
     networks:
       fullstack-service:
+    environment:
+      - DOCKER=true
 
 volumes:
   mongo-db:
