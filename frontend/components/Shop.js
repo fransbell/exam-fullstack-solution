@@ -14,6 +14,11 @@ const useStyles = createStyles((theme) => ({
   title: {
     padding: "1rem 2rem 0 2rem",
     alignItems: "center",
+    [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
+      flexDirection: "column",
+      justifyContent: "flex-start",
+      alignItems: "start",
+    },
   },
   table: {
     justifyContent: "flex-start",

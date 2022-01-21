@@ -32,7 +32,7 @@ const TableShopAllItem = ({ id }) => {
 
   return (
     <div>
-      <Table>
+      <Table style={{ minWidth: "500px" }}>
         <thead>
           <tr>
             <th>ลำดับ</th>
