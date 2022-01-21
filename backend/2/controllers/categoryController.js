@@ -1,7 +1,6 @@
 const Category = require("../models/category")
 
 const create = (req, res) => {
-  console.log(req.body)
   const category = new Category(req.body)
   category
     .save()

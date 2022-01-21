@@ -1,7 +1,7 @@
 const Shop = require("../models/shop")
+const Item = require("../models/item")
 
 const create = (req, res) => {
-  console.log(req.body)
   const shop = new Shop(req.body)
   shop
     .save()
@@ -44,7 +44,9 @@ const update = (req, res) => {
 
 const drop = (req, res) => {
   Shop.findByIdAndRemove(req.params.id)
-    .then((result) => {
+    .then(async (result) => {
+      // removed items in shop by shopId
+      await Item.deleteMany({ shopId: req.params.id })
       res.json(result)
     })
     .catch((e) => {
