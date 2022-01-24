@@ -77,16 +77,18 @@ const Post = () => {
   const [delTarget, setDelTarget] = useState(null)
 
   useEffect(() => {
-    fetch(`/api/shops/${shopId}`).then((result) => {
-      result.json().then((res) => {
-        setData(res)
+    if (shopId) {
+      fetch(`/api/shops/${shopId}`).then((result) => {
+        result.json().then((res) => {
+          setData(res)
+        })
       })
-    })
-    fetch(`/api/items/shop/${shopId}`).then((result) => {
-      result.json().then((res) => {
-        setItems(res)
+      fetch(`/api/items/shop/${shopId}`).then((result) => {
+        result.json().then((res) => {
+          setItems(res)
+        })
       })
-    })
+    }
   }, [router.isReady])
 
   useEffect(() => {

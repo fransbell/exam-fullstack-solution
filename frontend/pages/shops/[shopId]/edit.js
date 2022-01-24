@@ -4,7 +4,6 @@ import {
   Button,
   createStyles,
   InputWrapper,
-  JsonInput,
   Modal,
   Text,
   Textarea,
