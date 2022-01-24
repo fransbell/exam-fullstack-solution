@@ -1,0 +1,25 @@
+
+GET http://localhost:1111/api/items/
+###
+
+POST http://localhost:1111/api/items/create
+Content-Type: application/json
+
+{
+    "name" : "ขนมเยลลี่รสส้ม",
+    "description":"เหนียว นุ่ม เคี้ยอร่อย",
+    "shopId":"871ce2e3-192d-40c6-8912-59623a8c3684",
+    "category":"ขนมขบเคี้ยว",
+    "price":100,
+    "tag":"ซอง"
+}
+###
+POST http://localhost:1111/api/items/update/328a5711-be21-4216-89ba-8b88d6ee5045
+Content-Type: application/json
+
+{    
+    "price":20
+}
+
+###
+DELETE http://localhost:1111/api/items/delete/859d83e1-a7c0-4ecc-8c47-e3e4e16cdb40

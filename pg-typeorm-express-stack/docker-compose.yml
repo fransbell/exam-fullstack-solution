@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  postgresdb:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_DATABASE}
+    volumes:
+      - postgresdb:/var/lib/postgresql/data
+    networks:
+      - fullstack-services
+
+  backend:
+    build: .
+    container_name: node-express
+    ports:
+      - 1111:1111
+    volumes:
+      - ./src:/app/src
+      - /app/node_modules
+    networks:
+      - fullstack-services
+
+  frontend:
+    build: ../frontend/
+    container_name: frontend
+    ports:
+      - 3000:3000
+    networks:
+      fullstack-services:
+    environment:
+      - DOCKER=true
+
+volumes:
+  postgresdb:
+networks:
+  fullstack-services:

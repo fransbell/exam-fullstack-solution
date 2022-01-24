@@ -1,0 +1,26 @@
+
+GET http://localhost:1111/api/shops/
+###
+
+POST http://localhost:1111/api/shops/create
+Content-Type: application/json
+
+{
+    "name" : "คึกคัก1",
+    "description":"ขายตลอด 24 ชม นะจะ อุอุ อิอิ",
+    "tel":"123456",
+    "address":"155 หมู่ 2 ต.แม่เหียะ อ.เมือง จ.เชียงใหม่ 50100"
+}
+###
+POST http://localhost:1111/api/shops/update/54d98204-3026-4cbe-9681-b78570c00b94
+Content-Type: application/json
+
+{
+    "name" : "คึกคักนะ",
+    "description":"ขายตลอด 24/77 ไม่มีปิดนะอิอิกินกันให้เต็มที่อิอิจังายตลอด 24/7 ไม่มีปิดนะอิอิกินกันให้เต็มที่อิอิจังขายตลอด 24/7 ไม่มีปิดนะอิอิกินกันให้เต็มที่อิอิจัง",
+    "tel":"0123456789",
+    "address":"155 หมู่ 2 ต.แม่เหียะ อ.เมือง จ.เชียงใหม่ 50100"
+}
+
+###
+DELETE http://localhost:1111/api/shops/delete/87292a5e-3a03-4de4-96ab-7cee8247ffef
