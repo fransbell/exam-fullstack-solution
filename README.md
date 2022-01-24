@@ -88,7 +88,17 @@ docker-compose up -d
 
 ## Fullstack path
 
-docker-compose ใน root ประกอบไปด้วย
+docker-compose มีทั้งหมด 2 เวอร์ชั่น | 2 stack ได้แก่
+
+- nextjs , mongoose , express
+- nextjs , postgress , typeorm , express
+
+โดยทั้ง 2 ตัวจะใช้ frontend ตัวเดียวกัน สังเกตุได้จาก
+
+./docker-compose.yml -- mongodb-stack
+./pg-typeorm-express-stack/docker-compose.yml -- postgers-stack
+
+service ใน docker-compose ทั้ง 2 ตัวจะประกอบไปด้วย ถึงชื่อใน docker-compose จะต่างแต่ก็มีส่วนประกอบเหมือนๆกันคือ
 
 - Database
 - Backend
@@ -96,7 +106,26 @@ docker-compose ใน root ประกอบไปด้วย
 
 วิธีการรัน app
 
+สำหรับ mongodb-stack
+
 ```
+// cd ใน root folder
+// build image
+docker-compose build
+
+// run container
+docker-compose up -d
+
+```
+
+สำหรับ postgres-stack
+
+```
+// cd ใน root folder
+
+// cd ไป pg-typeorm-express-stack
+cd ./pg-typeorm-express-stack
+
 // build image
 docker-compose build
 
